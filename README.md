@@ -74,10 +74,11 @@ To use the app, you need an [OpenWeatherMap API key](https://openweathermap.org/
 
 ```js
 const apiKey = "YOUR_API_KEY_HERE"; // Replace with your actual key
-
+```
 ---
 
 ## 🙋‍♀️By
 - GitHub: [@Mary-Eqdaih](https://github.com/Mary-eqdaih)
+
 
 
