@@ -16,16 +16,18 @@ async function checkWeather(cityName) {
   loader.style.display = "block";
   const response = await fetch(apiURL + cityName + `&appid=${apiKey}`);
   var data = await response.json();
-  //   console.log(data);
+  // console.log(data);
 
   loader.style.display = "none";
 
   if (data.cod === "404") {
     input.value = "";
-    document.querySelector(".error").style.display = "block";
+    document.querySelector(".error.invalid").style.display = "block";
+    document.querySelector(".error.empty").style.display = "none";
     weather.style.display = "none";
   } else {
-    document.querySelector(".error").style.display = "none";
+    document.querySelector(".error.invalid").style.display = "none";
+    document.querySelector(".error.empty").style.display = "none";
     city.innerHTML = data.name;
     temp.innerHTML = Math.round(data.main.temp) + " °C";
     humidity.innerHTML = data.main.humidity + "%";
@@ -48,14 +50,19 @@ async function checkWeather(cityName) {
     }
 
     // document.querySelector(".box .weather").style.display = "block";
-    weather.style.display = "block"; 
+    weather.style.display = "block";
     setTimeout(() => {
-      weather.style.opacity = "1"; 
+      weather.style.opacity = "1";
     }, 10);
   }
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  checkWeather(input.value);
+  if (input.value.trim() == "") {
+     document.querySelector(".error.invalid").style.display = "none";
+    document.querySelector(".error.empty").style.display = "block";
+  } else {
+    checkWeather(input.value.trim());
+  }
 });
