@@ -10,7 +10,7 @@ weather-app/
 │
 ├── index.html # Main HTML file
 ├── style.css # App styling
-├── script.js # JavaScript logic
+├── main.js # JavaScript logic
 ├── images/ # Weather images (e.g. clear.png, rain.png, etc.)
 └── README.md # Project overview
 ```
@@ -62,4 +62,5 @@ weather-app/
 
 ## 🙋‍♀️By
 - GitHub: [@Mary-Eqdaih](https://github.com/Mary-eqdaih)
+
 
