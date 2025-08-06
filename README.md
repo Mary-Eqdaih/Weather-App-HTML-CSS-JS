@@ -30,6 +30,10 @@ weather-app/
 ## 🖼️ Screenshot
 
 > ![Weather App Screenshot](screenshot.png)
+> ![Weather App Screenshot 2](screenshot1.png)
+> ![Empty City Error Screenshot](screenshot2.png)
+> ![ Invalid City Error Screenshot](screenshot3.png)
+> ![ Mobile View Screenshot](screenshot4.png)
 
 ---
 
@@ -59,6 +63,19 @@ weather-app/
    - 🔑 Insert your API key in main.js: const apiKey = "YOUR_API_KEY_HERE";
 
 ---   
+
+## 🔐 API Key Setup
+
+To use the app, you need an [OpenWeatherMap API key](https://openweathermap.org/appid):
+
+1. Sign up at [https://openweathermap.org](https://openweathermap.org)
+2. Go to your account > API keys > Create a new key
+3. Open `main.js` and replace this line:
+
+```js
+const apiKey = "YOUR_API_KEY_HERE"; // Replace with your actual key
+
+---
 
 ## 🙋‍♀️By
 - GitHub: [@Mary-Eqdaih](https://github.com/Mary-eqdaih)

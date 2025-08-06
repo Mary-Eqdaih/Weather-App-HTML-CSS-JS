@@ -8,7 +8,8 @@ let img = document.querySelector(".box img");
 let loader = document.querySelector(".loader");
 let weather = document.querySelector(".box .weather");
 
-const apiKey = "2a2934bbd2d881d41d35d1d2c7112d9e";
+const apiKey = "YOUR_API_KEY_HERE" ; // Replace with your own OpenWeatherMap API key
+
 const apiURL =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
@@ -49,8 +50,7 @@ async function checkWeather(cityName) {
       img.src = "images/wind.png";
     }
 
-    // document.querySelector(".box .weather").style.display = "block";
-    weather.style.display = "block";
+       weather.style.display = "block";
     setTimeout(() => {
       weather.style.opacity = "1";
     }, 10);
@@ -60,7 +60,7 @@ async function checkWeather(cityName) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (input.value.trim() == "") {
-     document.querySelector(".error.invalid").style.display = "none";
+    document.querySelector(".error.invalid").style.display = "none";
     document.querySelector(".error.empty").style.display = "block";
   } else {
     checkWeather(input.value.trim());
